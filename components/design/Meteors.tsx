@@ -1,11 +1,20 @@
 import BoxReveal from "../ui/box-reveal";
 import HyperText from "../ui/hyper-text";
-// import { Meteors } from "../ui/meteors";
+import MorphingText from "../ui/morphing-text";
+import { Meteors } from "../ui/meteors";
+import ShinyButton from "../ui/shiny-button";
+
+const texts = [
+  "Hello",
+  "Next.js",
+  "Momin",
+  "React",
+];
 
 export function MeteorDemo() {
   return (
-    <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl">
-      {/* <Meteors number={50} /> */}
+    <div className="relative flex h-[600px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl">
+      <Meteors number={50} />
       <div className="flex items-center gap-12">
         <div>
           <HyperText
@@ -14,11 +23,12 @@ export function MeteorDemo() {
             Md. Momin Hossain
           </HyperText>
           <p>Next.js Developer</p>
+          <ShinyButton className="text-white">Hire ME</ShinyButton>
         </div>
         <div className="size-full max-w-lg items-center justify-center overflow-hidden">
           <BoxReveal boxColor={"#5046e6"} duration={0.5}>
             <p className="text-[3.5rem] font-semibold">
-              Magic UI<span className="text-[#5046e6]">.</span>
+              Tourist<span className="text-[#5046e6]">.</span>
             </p>
           </BoxReveal>
           <BoxReveal boxColor={"#5046e6"} duration={0.5}>
@@ -53,6 +63,7 @@ export function MeteorDemo() {
           </BoxReveal>
         </div>
       </div>
+      <MorphingText texts={texts} />;
     </div>
   );
 }

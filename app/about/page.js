@@ -1,9 +1,9 @@
-import { NeonGradientCardDemo } from "@/components/design/Neon";
+import LampDemo from "@/components/ui/lamp";
 
 export default function About() {
   return (
-    <div className="flex justify-center my-10">
-      <NeonGradientCardDemo />
+    <div>
+      <LampDemo />
     </div>
   );
 }
