@@ -56,6 +56,33 @@ const config: Config = {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
+  		},
+  		animation: {
+  			meteor: 'meteor 5s linear infinite',
+  			'background-position-spin': 'background-position-spin 3000ms infinite alternate'
+  		},
+  		keyframes: {
+  			meteor: {
+  				'0%': {
+  					transform: 'rotate(215deg) translateX(0)',
+  					opacity: '1'
+  				},
+  				'70%': {
+  					opacity: '1'
+  				},
+  				'100%': {
+  					transform: 'rotate(215deg) translateX(-500px)',
+  					opacity: '0'
+  				}
+  			},
+  			'background-position-spin': {
+  				'0%': {
+  					backgroundPosition: 'top center'
+  				},
+  				'100%': {
+  					backgroundPosition: 'bottom center'
+  				}
+  			}
   		}
   	}
   },
